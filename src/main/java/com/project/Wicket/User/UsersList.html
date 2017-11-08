@@ -1,0 +1,95 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title>Список пользователей</title>
+    <style>
+        TABLE {
+            border-collapse: collapse;
+        }
+
+        TD {
+            padding: 3px;
+            border: 1px solid black;
+        }
+
+    </style>
+    <wicket:head>
+        <wicket:link>
+            <link rel="stylesheet" type="text/css" href="../../CSS/Styles.css"/>
+        </wicket:link>
+    </wicket:head>
+</head>
+<body>
+<header>
+    <a wicket:id="mainPage" style="color: #46515c; margin-left: 10px;">
+        <img wicket:id="logo">
+    </a>
+    <span class="header" style="position: absolute; left: 77%; top: 10%;">Фамилия</span>
+    <span class="header" style="position: absolute; right: 15%; top: 10%;">Имя</span>
+    <span class="header" style="position: absolute; left: 77%; bottom: 10%;">дд.мм.гггг</span>
+    <a class="header" style="position: absolute; right: 3%; top: 10%;">Выход из системы</a>
+</header>
+<form wicket:id="formTop" class="formColor">
+    <a wicket:id="UsersListLink" class="topNow">Список пользователей</a>
+    <a wicket:id="UsersMobileListLink" class="top">Телефонный справочник</a>
+    <a wicket:id="ProductsListLink" class="top">Список продуктов</a>
+</form>
+<form wicket:id="form" style="margin-top: 100px">
+    <a wicket:id="addUserLink" class="link">Добавить пользователя</a>
+    <form wicket:id="search">
+        <table>
+            <tr>
+                <th>Фамилия</th>
+                <th>Должность</th>
+                <th>Подразделение</th>
+            </tr>
+            <tr>
+                <td><input wicket:id="textfieldUserSecondname"></td>
+                <td><select wicket:id="choicePosition"></select></td>
+                <td><select wicket:id="choiceSub"></select></td>
+                <td>
+                    <button wicket:id="searchSecondname">Поиск</button>
+                </td>
+                <td><button wicket:id="resetSearch">Отчистить</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <span wicket:id="lblTop"></span>
+    <span wicket:id="navigatorTop"></span>
+
+    <table>
+        <col width="120">
+        <col width="100">
+        <col width="100">
+        <col width="690">
+        <col width="470">
+        <col width="75">
+        <thead>
+        <tr>
+            <th><a wicket:id="sort" class="link">Фамилия</a></th>
+            <th>Имя</th>
+            <th>Отчество</th>
+            <th>Должность</th>
+            <th>Подразделение</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr wicket:id="simple">
+            <td><span wicket:id="secondName"></span></td>
+            <td><span wicket:id="name"></span></td>
+            <td><span wicket:id="patr"></span></td>
+            <td><span wicket:id="userPosition"></span></td>
+            <td><span wicket:id="userSub"></span></td>
+            <td>
+                <!--<div wicket:id="modalWindow" class="link"></div>-->
+                <a wicket:id="userPageLink" class="link">Карточка</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <span wicket:id="lblBot"></span>
+    <span wicket:id="navigatorBot"></span>
+</form>
+
+</body>
+</html>

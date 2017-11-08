@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Загрузка файла</title>
+    <style>
+        .input {
+
+            margin-left: 75%;
+
+        }
+    </style>
+</head>
+<body>
+<form wicket:id="form">
+    <span>Вид документа</span>
+    <select wicket:id="choiceType" required/>
+    <p>
+        <span>Файл:</span>
+        <input wicket:id="fileUpload" type="file" id="simpleUpload"/>
+    </p>
+    <p>
+    <input wicket:id="submitCancel" type="submit" value="Отменить">
+    <input wicket:id="submitSave" type="submit" value="Загрузить">
+    </p>
+</form>
+
+</body>
+</html>

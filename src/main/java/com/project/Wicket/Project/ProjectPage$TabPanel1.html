@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wicket="http://wicket.apache.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<wicket:panel>
+    <form wicket:id="mainForm" style="position: relative; top: 27px">
+        <form wicket:id="formGeneralInformation" style="position: absolute; left: 5px">
+            <table>
+                <tr>
+                    <td><span wicket:id="name"/></td>
+                    <td><span wicket:id="projectName"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="cipher"/></td>
+                    <td><span wicket:id="projectCipher"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="customer"/></td>
+                    <td><span wicket:id="projectCustomer"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="type"/></td>
+                    <td><span wicket:id="projectType"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="applicationArea"/></td>
+                    <td><span wicket:id="projectApplicationArea"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="target"/></td>
+                    <td><span wicket:id="projectTarget"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="dataStart"/></td>
+                    <td><span wicket:id="projectDataStart"/></td>
+                    <td><span wicket:id="projectDataEnd"/></td>
+                </tr>
+            </table>
+            <br/>
+            <input type="submit" wicket:id="changeGeneralInformation" value="Изменить"/>
+        </form>
+
+        <form wicket:id="formTechnologies" style="position: absolute; right: 5px">
+            <table>
+                <tr>
+                    <td><span wicket:id="technologicalType"/></td>
+                    <td><span wicket:id="projectTechnologicalType"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="technologicalResults"/></td>
+                    <td><span wicket:id="projectTechnologicalResults"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="centralization"/></td>
+                    <td><span wicket:id="projectCentralization"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="architecture"/></td>
+                    <td><span wicket:id="projectArchitecture"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="languages"/></td>
+                    <td><span wicket:id="projectLanguages"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="database"/></td>
+                    <td><span wicket:id="projectDatabase"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="logic"/></td>
+                    <td><span wicket:id="projectLogic"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="tools"/></td>
+                    <td><span wicket:id="projectTools"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="informationInteraction"/></td>
+                    <td><span wicket:id="projectInformationInteraction"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="encryptionTools"/></td>
+                    <td><span wicket:id="projectEncryptionTools"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="hardwarePlatform"/></td>
+                    <td><span wicket:id="projectHardwarePlatform"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="scalability"/></td>
+                    <td><span wicket:id="projectScalability"/></td>
+                </tr>
+                <tr>
+                    <td><span wicket:id="replicate"/></td>
+                    <td><span wicket:id="projectReplicate"/></td>
+                </tr>
+            </table>
+            <br/>
+            <input type="submit" wicket:id="changeTechnologies" value="Изменить"/>
+        </form>
+    </form>
+</wicket:panel>
+</body>
+</html>

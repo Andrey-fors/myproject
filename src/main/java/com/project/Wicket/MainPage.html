@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title>Главная страница</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <style>
+
+    </style>
+    <wicket:head>
+        <wicket:link>
+            <link rel="stylesheet" type="text/css" href="../CSS/Styles.css"/>
+        </wicket:link>
+    </wicket:head>
+
+</head>
+<body>
+<header style="position: fixed">
+    <a wicket:id="mainPage" style="color: #46515c; margin-left: 10px;">
+        <img wicket:id="logo">
+    </a>
+    <span class="header" style="position: absolute; left: 77%; top: 10%;">Фамилия</span>
+    <span class="header" style="position: absolute; right: 15%; top: 10%;">Имя</span>
+    <span class="header" style="position: absolute; left: 77%; bottom: 10%;">дд.мм.гггг</span>
+    <a class="header" style="position: absolute; right: 3%; top: 10%; color: white">Выход из системы</a>
+</header>
+<form wicket:id="formTop" class="formColor">
+    <h4 style="margin-bottom: 3px;">
+        <a wicket:id="UsersListLink" class="badge badge-secondary top">Список пользователей</a>
+        <a wicket:id="UsersMobileListLink" class="badge badge-secondary top">Телефонный справочник</a>
+        <a wicket:id="ProductsListLink" class="badge badge-secondary top">Список продуктов</a>
+        <a wicket:id="ProjectsListLink" class="badge badge-secondary top">Проект</a><span class="required">Не закончено</span>
+    </h4>
+</form>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+</body>
+</html>

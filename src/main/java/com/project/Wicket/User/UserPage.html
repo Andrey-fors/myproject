@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <style>
+        .img {
+            float: right;
+            margin-right: 10%;
+            margin-top: 5%;
+            width: 100px;
+            height: 120px;
+        }
+    </style>
+    <wicket:head>
+        <wicket:link>
+            <link rel="stylesheet" type="text/css" href="../../CSS/Styles.css"/>
+        </wicket:link>
+    </wicket:head>
+</head>
+<body>
+<header>
+    <a wicket:id="mainPage" style="color: #46515c; margin-left: 10px;">
+        <img wicket:id="logo">
+    </a>
+    <span class="header" style="position: absolute; left: 77%; top: 10%;">Фамилия</span>
+    <span class="header" style="position: absolute; right: 15%; top: 10%;">Имя</span>
+    <span class="header" style="position: absolute; left: 77%; bottom: 10%;">дд.мм.гггг</span>
+    <a class="header" style="position: absolute; right: 3%; top: 10%;">Выход из системы</a>
+</header>
+<form wicket:id="formTop" class="formColor">
+    <a wicket:id="UsersListLink" class="top">Список пользователей</a>
+    <a wicket:id="UsersMobileListLink" class="top">Телефонный справочник</a>
+    <a wicket:id="ProductsListLink" class="top">Список продуктов</a>
+</form>
+
+<form wicket:id="form" style="margin-top: 100px">
+
+    <div wicket:id="container"></div>
+
+</form>
+
+<wicket:fragment wicket:id="viewFragment">
+
+    <br/>
+    <span wicket:id="secondName"></span>
+    <span wicket:id="name"></span>
+    <span wicket:id="patr"></span>
+    <a><img wicket:id="cat" alt="фото отсутствует" class="img"></a>
+    <br/>
+    <br/>
+    <span wicket:id="userConf"></span>
+    <br/>
+    <br/>
+    <span wicket:id="userDate"></span>
+    <br/>
+    <br/>
+    <span wicket:id="userPosition"></span>
+    <br/>
+    <br/>
+    <span wicket:id="userSub"></span>
+    <br/>
+    <br/>
+    <span wicket:id="userBranch"></span>
+    <br/>
+    <span wicket:id="userAdress"></span>
+    <br/>
+    <br/>
+    <span wicket:id="userOfficialMobile"></span>
+    <br/>
+    <span wicket:id="userMobile"></span>
+    <br/>
+    <br/>
+    <span wicket:id="userRole"></span>
+    <br/>
+    <br/>
+    <a wicket:id="UsersListLinkBack" class="link">Назад</a>
+    <a wicket:id="UserChangeLink" class="link">Изменить</a>
+</wicket:fragment>
+
+</body>
+</html>

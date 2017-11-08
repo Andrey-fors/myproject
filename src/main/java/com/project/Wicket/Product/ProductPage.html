@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title>Продукт</title>
+    <style>
+        TABLE {
+            border-collapse: collapse;
+        }
+
+        TD {
+            padding: 3px;
+            border: 1px solid black;
+        }
+
+        .tech {
+            font-size: 1.2em;
+        }
+    </style>
+    <wicket:head>
+        <wicket:link>
+            <link rel="stylesheet" type="text/css" href="../../CSS/Styles.css"/>
+        </wicket:link>
+    </wicket:head>
+</head>
+<body>
+<header>
+    <a wicket:id="mainPage" style="color: #46515c; margin-left: 10px;">
+        <img wicket:id="logo">
+    </a>
+    <span class="header" style="position: absolute; left: 77%; top: 10%;">Фамилия</span>
+    <span class="header" style="position: absolute; right: 15%; top: 10%;">Имя</span>
+    <span class="header" style="position: absolute; left: 77%; bottom: 10%;">дд.мм.гггг</span>
+    <a class="header" style="position: absolute; right: 3%; top: 10%;">Выход из системы</a>
+</header>
+<form wicket:id="formTop" class="formColor">
+    <a wicket:id="UsersListLink" class="top">Список пользователей</a>
+    <a wicket:id="UsersMobileListLink" class="top">Телефонный справочник</a>
+    <a wicket:id="ProductsListLink" class="top">Список продуктов</a>
+</form>
+
+<form wicket:id="form" style="margin-top: 100px">
+
+    <div wicket:id="container"></div>
+
+</form>
+
+<wicket:fragment wicket:id="viewFragment">
+
+    <table>
+        <tr>
+            <td><span wicket:id="name"/></td>
+            <td><span wicket:id="productName"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="type"/></td>
+            <td><span wicket:id="productType"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="code"/></td>
+            <td><span wicket:id="productCode"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="direction"/></td>
+            <td><span wicket:id="productDirection"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="features"/></td>
+            <td><span wicket:id="productFeatures"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="customers"/></td>
+            <td><span wicket:id="productCustomers"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="automationArea"/></td>
+            <td><span wicket:id="productAutomationArea"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="targets"/></td>
+            <td><span wicket:id="productTargets"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="tasks"/></td>
+            <td><span wicket:id="productTasks"/></td>
+        </tr>
+
+        <tr>
+            <td><span wicket:id="technologies" class="tech"/></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="centralization"/></td>
+            <td><span wicket:id="productCentralization"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="architecture"/></td>
+            <td><span wicket:id="productArchitecture"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="languages"/></td>
+            <td><span wicket:id="productLanguages"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="database"/></td>
+            <td><span wicket:id="productDatabase"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="tools"/></td>
+            <td><span wicket:id="productTools"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="encryptions"/></td>
+            <td><span wicket:id="productEncryptions"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="requirements"/></td>
+            <td><span wicket:id="productRequirements"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="integration"/></td>
+            <td><span wicket:id="productIntegration"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="work"/></td>
+            <td><span wicket:id="productWork"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="number"/></td>
+            <td><span wicket:id="productNumber"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="inclusion"/></td>
+            <td><span wicket:id="productInclusion"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="documents"/></td>
+            <td></td>
+        </tr>
+        <tr wicket:id="simple">
+            <td></td>
+            <td><a wicket:id="downloadLink"><span wicket:id="filesName"/></a></td>
+        </tr>
+    </table>
+
+    <a wicket:id="UsersListLinkBack">Назад</a>
+    <a wicket:id="UserChangeLink">Изменить</a>
+
+</wicket:fragment>
+</body>
+</html>

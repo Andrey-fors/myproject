@@ -1,0 +1,103 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title>Список продуктов</title>
+    <style>
+        .table {
+            border-collapse: collapse;
+        }
+
+        .td {
+            padding: 3px;
+            border: 1px solid black;
+        }
+
+        .search {
+            margin-left: 12%;
+            font-weight: 600;
+        }
+    </style>
+    <wicket:head>
+        <wicket:link>
+            <link rel="stylesheet" type="text/css" href="../../CSS/Styles.css"/>
+        </wicket:link>
+    </wicket:head>
+</head>
+<body>
+<header>
+    <a wicket:id="mainPage" style="color: #46515c; margin-left: 10px;">
+        <img wicket:id="logo">
+    </a>
+    <span class="header" style="position: absolute; left: 77%; top: 10%;">Фамилия</span>
+    <span class="header" style="position: absolute; right: 15%; top: 10%;">Имя</span>
+    <span class="header" style="position: absolute; left: 77%; bottom: 10%;">дд.мм.гггг</span>
+    <a class="header" style="position: absolute; right: 3%; top: 10%;">Выход из системы</a>
+</header>
+<form wicket:id="formTop" class="formColor">
+    <a wicket:id="UsersListLink" class="top">Список пользователей</a>
+    <a wicket:id="UsersMobileListLink" class="top">Телефонный справочник</a>
+    <a wicket:id="ProductsListLink" class="topNow">Список продуктов</a>
+</form>
+
+<form wicket:id="form" style="margin-top: 100px">
+    <a wicket:id="addProductLink">Добавить продукт</a>
+    <form wicket:id="search">
+        <table class="table">
+            <tr>
+                <th>Название</th>
+                <th>Код</th>
+                <th>Тип</th>
+                <th>Область решения</th>
+            </tr>
+            <tr>
+                <td class="td"><input wicket:id="textfieldName"></td>
+                <td class="td"><input wicket:id="textfieldCode"></td>
+                <td class="td"><select wicket:id="productTypeChoice"></select></td>
+                <td class="td"><select wicket:id="productDirectionChoice"></select></td>
+            </tr>
+        </table>
+        <span class="search">Область автоматизации</span><br/>
+        <select wicket:id="productAutomationAreaChoice"></select>
+        <button wicket:id="search">Поиск</button>
+        <button wicket:id="resetSearch">Отчистить</button>
+    </form>
+
+    <span wicket:id="lblTop"></span>
+    <span wicket:id="navigatorTop"></span>
+
+    <table class="table">
+        <col width="150">
+        <col width="70">
+        <col width="70">
+        <col width="520">
+        <col width="650">
+        <thead>
+        <tr>
+            <th><a wicket:id="sortName">Название</a></th>
+            <th><a wicket:id="sortCode">Код</a></th>
+            <th>Тип</th>
+            <th>Область решения</th>
+            <th>Область автоматизации</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr wicket:id="simple">
+
+            <td class="td">
+                <a wicket:id="productPageLink">
+                    <span wicket:id="name"/>
+                </a>
+            </td>
+            <td class="td"><span wicket:id="code"/></td>
+            <td class="td"><span wicket:id="type"/></td>
+            <td class="td"><span wicket:id="direction"/></td>
+            <td class="td"><span wicket:id="automationArea"/></td>
+
+        </tr>
+        </tbody>
+    </table>
+    <span wicket:id="lblBot"/>
+    <span wicket:id="navigatorBot"/>
+</form>
+
+</body>
+</html>

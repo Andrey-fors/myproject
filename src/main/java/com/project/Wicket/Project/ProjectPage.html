@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title>Продукт</title>
+    <style>
+        TABLE {
+            border-collapse: collapse;
+        }
+
+        TD {
+            padding: 3px;
+            border: 1px solid black;
+        }
+
+        .tech {
+            font-size: 1.2em;
+        }
+
+        #header {
+            float: left;
+            width: 100%;
+            font-size: 93%;
+            line-height: normal;
+        }
+
+        #header li {
+            float:left;
+            margin:0;
+            padding:0 0 0 9px;
+        }
+        #header a {
+            float:left;
+            display:block;
+            background-color: #94b6ff;
+            padding:5px 15px 4px 6px;
+            text-decoration:none;
+            font-weight:bold;
+            color: white;
+        }
+        #header ul {
+            margin:0;
+            padding:10px 10px 0;
+            list-style:none;
+        }
+        #header #current {
+            background-color: #000cff;
+        }
+        #header #current li {
+            background-color: #000cff;
+            padding-bottom:5px;
+        }
+        #header #current a {
+            background-color: #000cff;
+            padding-bottom:5px;
+        }
+    </style>
+    <wicket:head>
+        <wicket:link>
+            <link rel="stylesheet" type="text/css" href="../../CSS/Styles.css"/>
+        </wicket:link>
+    </wicket:head>
+</head>
+<body>
+<header>
+    <a wicket:id="mainPage" style="color: #46515c; margin-left: 10px;">
+        <img wicket:id="logo">
+    </a>
+    <span class="header" style="position: absolute; left: 77%; top: 10%;">Фамилия</span>
+    <span class="header" style="position: absolute; right: 15%; top: 10%;">Имя</span>
+    <span class="header" style="position: absolute; left: 77%; bottom: 10%;">дд.мм.гггг</span>
+    <a class="header" style="position: absolute; right: 3%; top: 10%;">Выход из системы</a>
+</header>
+<form wicket:id="formTop" class="formColor">
+    <a wicket:id="UsersListLink" class="top">Список пользователей</a>
+    <a wicket:id="UsersMobileListLink" class="top">Телефонный справочник</a>
+    <a wicket:id="ProductsListLink" class="top">Список продуктов</a>
+</form>
+
+<form wicket:id="form" style="margin-top: 100px">
+    <h1>Карточка проекта</h1>
+    <a wicket:id="closeButton">Закрыть</a>
+    <div wicket:id="tabs" id="header">[tabbed panel will be here]</div>
+</form>
+
+</body>
+</html>

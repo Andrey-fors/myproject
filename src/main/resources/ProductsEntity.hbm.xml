@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.project.hibernate.entity.Product.ProductsEntity" table="products" schema="public" catalog="fors">
+        <id name="id">
+            <column name="id" sql-type="integer"/>
+            <generator class="native"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar"/>
+        </property>
+        <property name="type">
+            <column name="type" sql-type="varchar"/>
+        </property>
+        <property name="code">
+            <column name="code" sql-type="varchar"/>
+        </property>
+        <property name="direction">
+            <column name="direction" sql-type="varchar"/>
+        </property>
+        <property name="features">
+            <column name="features" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="customers">
+            <column name="customers" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="automationArea">
+            <column name="automationArea" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="targets">
+            <column name="targets" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="tasks">
+            <column name="tasks" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="centralization">
+            <column name="centralization" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="architecture">
+            <column name="architecture" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="languages">
+            <column name="languages" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="database">
+            <column name="database" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="tools">
+            <column name="tools" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="encryptions">
+            <column name="encryptions" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="requirements">
+            <column name="requirements" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="integration">
+            <column name="integration" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="work">
+            <column name="work" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="number">
+            <column name="number" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="inclusion">
+            <column name="inclusion" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="documents">
+            <column name="documents" sql-type="varchar" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

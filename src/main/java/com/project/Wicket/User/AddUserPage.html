@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <style>
+    </style>
+    <wicket:head>
+        <wicket:link>
+            <link rel="stylesheet" type="text/css" href="../../CSS/Styles.css"/>
+        </wicket:link>
+    </wicket:head>
+</head>
+<body>
+<header>
+    <a wicket:id="mainPage" style="color: #46515c; margin-left: 10px;">
+        <img wicket:id="logo">
+    </a>
+    <span class="header" style="position: absolute; left: 77%; top: 10%;">Фамилия</span>
+    <span class="header" style="position: absolute; right: 15%; top: 10%;">Имя</span>
+    <span class="header" style="position: absolute; left: 77%; bottom: 10%;">дд.мм.гггг</span>
+    <a class="header" style="position: absolute; right: 3%; top: 10%;">Выход из системы</a>
+</header>
+<form wicket:id="formTop" class="formColor">
+    <a wicket:id="UsersListLink" class="top">Список пользователей</a>
+    <a wicket:id="UsersMobileListLink" class="top">Телефонный справочник</a>
+    <a wicket:id="ProductsListLink" class="top">Список продуктов</a>
+</form>
+
+<form wicket:id="form" style="margin-top: 100px">
+    <span wicket:id="FIO"></span><span class="required">*</span><br/>
+    <input type="text" wicket:id="textfieldSecondName" placeholder="Фамилия" pattern="^[A-Za-zА-Яа-яЁё]+$" required/>
+    <input type="text" wicket:id="textfieldName" placeholder="Имя" pattern="^[A-Za-zА-Яа-яЁё]+$" required/>
+    <input type="text" wicket:id="textfieldPatr" placeholder="Отчество" pattern="^[A-Za-zА-Яа-яЁё]+$"/>
+    <br/>
+    <br/>
+    <span>Загрузка фотографии</span><br/>
+    <input wicket:id="fileUpload" size="40" type="file" accept="image/*"/>
+    <br/>
+    <br/>
+    <span wicket:id="user"></span><span class="required">*</span><br/>
+    <input type="email" wicket:id="textfieldUserConf" required/>
+    <br/>
+    <br/>
+    <span wicket:id="date"></span><span class="required">*</span><br/>
+    <input type="text" wicket:id="dateTextField" placeholder="DD.MM.YYYY" pattern="[0-3]{1}[0-9]{1}.[0-1]{1}[0-9]{1}.[0-9]{4}" required/>
+    <br/>
+    <br/>
+    <span wicket:id="position"></span><span class="required">*</span><br/>
+    <select wicket:id="choicePosition" required>
+        <option></option>
+    </select>
+    <br/>
+    <br/>
+    <span wicket:id="department"></span><span class="required">*</span><br/>
+    <select wicket:id="choiceSub" required>
+        <option></option>
+    </select>
+    <br/>
+    <br/>
+    <span wicket:id="branch"></span><span class="required">*</span><br/>
+    <select wicket:id="choiceBranch" required>
+        <option></option>
+    </select>
+    <br/>
+    <span wicket:id="adress"></span><span class="required">*</span><br/>
+    <select wicket:id="choiceAdress" required>
+        <option></option>
+    </select>
+    <br/>
+    <br/>
+    <span wicket:id="officialMobile"></span>
+    <input type="text" wicket:id="textfieldUserOfficialMobile"/>
+    <br/>
+    <span wicket:id="mobile"></span>
+    <input type="text" wicket:id="textfieldUserMobile"/>
+    <br/>
+    <br/>
+    <span wicket:id="role"></span><span class="required">*</span><br/>
+    <select wicket:id="dropDownRole" required>
+        <option></option>
+    </select>
+    <br/>
+    <br/>
+    <a wicket:id="UsersListLinkBack" class="link">Отменить</a>
+    <span wicket:id="feedback"></span>
+    <input type="submit" wicket:id="submitSave" value="Сохранить">
+</form>
+</body>
+</html>

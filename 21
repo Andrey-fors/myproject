@@ -1,0 +1,2 @@
+com.project:myproject:war:0.1
+\- org.hibernate:hibernate-core:jar:5.2.6.Final:compile

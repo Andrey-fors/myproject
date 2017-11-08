@@ -1,0 +1,45 @@
+.formColor {
+    top: 9%;
+    left: 0%;
+    position: fixed;
+    width: 100%;
+    background-color: #868e96;
+}
+
+.top {
+    color: black;
+    /*padding: 10px;*/
+    /*font-size: 120%;*/
+}
+
+.topNow {
+    text-decoration: underline;
+    color: white;
+    /*padding: 10px;*/
+    /*font-size: 120%;*/
+}
+
+HEADER {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #46515c;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.header {
+    color: white;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.required {
+    color: #BA0000;
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: bold;
+}

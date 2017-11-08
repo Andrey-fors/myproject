@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.project.hibernate.entity.Project.ProjectsEntity" table="projects" schema="public" catalog="fors">
+        <id name="id">
+            <column name="id" sql-type="integer"/>
+        </id>
+        <property name="projectname">
+            <column name="projectname" sql-type="varchar"/>
+        </property>
+        <property name="projectcipher">
+            <column name="projectcipher" sql-type="varchar"/>
+        </property>
+        <property name="projectcustomer">
+            <column name="projectcustomer" sql-type="varchar"/>
+        </property>
+        <property name="projecttype">
+            <column name="projecttype" sql-type="varchar"/>
+        </property>
+        <property name="projectapplicationarea">
+            <column name="projectapplicationarea" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="projecttarget">
+            <column name="projecttarget" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="projectdatastart">
+            <column name="projectdatastart" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="projectdataend">
+            <column name="projectdataend" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="projecttechnologicaltype">
+            <column name="projecttechnologicaltype" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="projectstechnologicalresults">
+            <column name="projectstechnologicalresults" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="projectcentralization">
+            <column name="projectcentralization" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="projectarchitecture">
+            <column name="projectarchitecture" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="projectlanguages">
+            <column name="projectlanguages" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="projectdatabase">
+            <column name="projectdatabase" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="projectlogic">
+            <column name="projectlogic" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="projecttools">
+            <column name="projecttools" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="projectinformationinteraction">
+            <column name="projectinformationinteraction" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="projectencryptiontools">
+            <column name="projectencryptiontools" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="projectpersonaldata">
+            <column name="projectpersonaldata" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="projecthardwareplatform">
+            <column name="projecthardwareplatform" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="projectscalability">
+            <column name="projectscalability" sql-type="varchar" not-null="true"/>
+        </property>
+        <property name="projectreplicate">
+            <column name="projectreplicate" sql-type="varchar" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

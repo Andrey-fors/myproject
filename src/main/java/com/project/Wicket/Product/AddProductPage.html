@@ -1,0 +1,149 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title>Добавить проект</title>
+    <style>
+        TABLE {
+            border-collapse: collapse;
+        }
+        TD {
+            padding: 3px;
+            border: 1px solid black;
+        }
+        .save {
+            margin-left: 55%;
+        }
+        .tech {
+            font-size: 1.2em;
+        }
+
+    </style>
+    <wicket:head>
+        <wicket:link>
+            <link rel="stylesheet" type="text/css" href="../../CSS/Styles.css"/>
+        </wicket:link>
+    </wicket:head>
+</head>
+<body>
+<header>
+    <a wicket:id="mainPage" style="color: #46515c; margin-left: 10px;">
+        <img wicket:id="logo">
+    </a>
+    <span class="header" style="position: absolute; left: 77%; top: 10%;">Фамилия</span>
+    <span class="header" style="position: absolute; right: 15%; top: 10%;">Имя</span>
+    <span class="header" style="position: absolute; left: 77%; bottom: 10%;">дд.мм.гггг</span>
+    <a class="header" style="position: absolute; right: 3%; top: 10%;">Выход из системы</a>
+</header>
+<form wicket:id="formTop" class="formColor">
+    <a wicket:id="UsersListLink" class="top">Список пользователей</a>
+    <a wicket:id="UsersMobileListLink" class="top">Телефонный справочник</a>
+    <a wicket:id="ProductsListLink" class="top">Список продуктов</a>
+</form>
+
+<form wicket:id="form" style="margin-top: 100px">
+
+    <table>
+        <col>
+        <col width="1000">
+        <tr>
+            <td><span wicket:id="name"/><span class="required">*</span></td>
+            <td><input type="text" wicket:id="textfieldProductName" required/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="type"/><span class="required">*</span></td>
+            <td><select wicket:id="productTypeChoice" required/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="code"/><span class="required">*</span></td>
+            <td><input type="text" wicket:id="textfieldProductCode" required/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="direction"/><span class="required">*</span></td>
+            <td><select wicket:id="productDirectionChoice" required/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="features"/></td>
+            <td><textarea wicket:id="textareaProductFeatures" rows="5" cols="50"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="customers"/><span class="required">*</span></td>
+            <td><select wicket:id="productCustomersChoice" required/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="automationArea"/><span class="required">*</span></td>
+            <td><select wicket:id="productAutomationAreaChoice" rows="5" cols="50" required/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="targets"/></td>
+            <td><textarea wicket:id="textareaProductTargets" rows="5" cols="50"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="tasks"/></td>
+            <td><textarea wicket:id="textareaProductTasks" rows="5" cols="50"/></td>
+        </tr>
+
+        <tr>
+            <td><span wicket:id="technologies" class="tech"/></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="centralization"/></td>
+            <td><select wicket:id="centralizationChoice"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="architecture"/></td>
+            <td><select wicket:id="architectureChoice"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="languages"/></td>
+            <td><select wicket:id="languagesChoice"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="database"/></td>
+            <td><select wicket:id="databaseChoice"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="tools"/></td>
+            <td><select wicket:id="toolsChoice"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="encryptions"/></td>
+            <td><select wicket:id="encryptionsChoice"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="requirements"/></td>
+            <td><textarea wicket:id="textareaProductRequirements" rows="5" cols="50"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="integration"/></td>
+            <td><textarea wicket:id="textareaProductIntegration" rows="5" cols="50"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="work"/></td>
+            <td><select wicket:id="productWorkChoice"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="number"/></td>
+            <td><input type="text" wicket:id="textfieldProductNumber"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="inclusion"/></td>
+            <td><textarea wicket:id="textareaProductInclusion" rows="5" cols="50"/></td>
+        </tr>
+        <tr>
+            <td><span wicket:id="documents"/></td>
+            <td>
+                <div wicket:id="modalWindowLoadFile"></div>
+                <a wicket:id="loadFileLink">Добавить</a>
+            </td>
+        </tr>
+    </table>
+
+    <br>
+    <span wicket:id="feedback"></span>
+    <a wicket:id="ProductsListLinkBack">Отменить</a>
+    <input type="submit" wicket:id="submitSave" value="Сохранить">
+
+
+</form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.project.hibernate.entity.User.Users" table="users" schema="public" catalog="fors">
+        <id name="id">
+            <column name="id" sql-type="integer"/>
+            <generator class="native"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="varchar(60)" length="60"/>
+        </property>
+        <property name="patr">
+            <column name="patr" sql-type="varchar(60)" length="60" not-null="true"/>
+        </property>
+        <property name="secondname">
+            <column name="secondname" sql-type="varchar(60)" length="60"/>
+        </property>
+        <property name="useradress">
+            <column name="useradress" sql-type="varchar(80)" length="80"/>
+        </property>
+        <property name="userconf">
+            <column name="userconf" sql-type="varchar(60)" length="60"/>
+        </property>
+        <property name="userdate">
+            <column name="userdate" sql-type="varchar(60)" length="60"/>
+        </property>
+        <property name="userpart">
+            <column name="userpart" sql-type="varchar(70)" length="70"/>
+        </property>
+        <property name="userimg">
+            <column name="userimg" sql-type="varchar(60)" length="60" not-null="true"/>
+        </property>
+        <property name="usermobile">
+            <column name="usermobile" sql-type="varchar(60)" length="60" not-null="true"/>
+        </property>
+        <property name="userofficialmobile">
+            <column name="userofficialmobile" sql-type="varchar(60)" length="60" not-null="true"/>
+        </property>
+        <property name="userposition">
+            <column name="userposition" sql-type="varchar(60)" length="60"/>
+        </property>
+        <property name="userrole">
+            <column name="userrole" sql-type="varchar(60)" length="60"/>
+        </property>
+        <property name="usersub">
+            <column name="usersub" sql-type="varchar(60)" length="60"/>
+        </property>
+    </class>
+</hibernate-mapping>

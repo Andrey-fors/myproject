@@ -1,0 +1,104 @@
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <title>Телефонный справочник</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <style>
+        /*TABLE {*/
+            /*border-collapse: collapse;*/
+        /*}*/
+
+        /*TD {*/
+            /*padding: 3px;*/
+            /*border: 1px solid black;*/
+        /*}*/
+
+    </style>
+    <wicket:head>
+        <wicket:link>
+            <link rel="stylesheet" type="text/css" href="../../CSS/Styles.css"/>
+        </wicket:link>
+    </wicket:head>
+</head>
+<body>
+<header style="position: fixed; width: 100%;">
+    <a wicket:id="mainPage" style="color: #46515c; margin-left: 10px;">
+        <img wicket:id="logo">
+    </a>
+    <span class="header" style="position: absolute; left: 77%; top: 10%;">Фамилия</span>
+    <span class="header" style="position: absolute; right: 15%; top: 10%;">Имя</span>
+    <span class="header" style="position: absolute; left: 77%; bottom: 10%;">дд.мм.гггг</span>
+    <a class="header" style="position: absolute; right: 3%; top: 10%;">Выход из системы</a>
+</header>
+
+<form wicket:id="formTop" class="formColor">
+    <h4>
+    <a wicket:id="UsersListLink" class="badge badge-secondary top">Список пользователей</a>
+    <a wicket:id="UsersMobileListLink" class="badge badge-secondary topNow">Телефонный справочник</a>
+    <a wicket:id="ProductsListLink" class="badge badge-secondary top">Список продуктов</a>
+    </h4>
+</form>
+
+<form wicket:id="form" style="margin-top: 110px">
+
+    <form wicket:id="search">
+        <table>
+            <tr>
+                <th>Фамилия</th>
+                <th>Должность</th>
+                <th>Подразделение</th>
+            </tr>
+            <tr>
+                <td><input wicket:id="textfieldUserSecondname"></td>
+                <td><select wicket:id="choicePosition"></select></td>
+                <td><select wicket:id="choiceSub"></select></td>
+                <td><button wicket:id="search" class="btn btn-secondary btn-sm">Поиск</button></td>
+                <td><button wicket:id="resetSearch" class="btn btn-secondary btn-sm">Отчистить</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <span wicket:id="lblTop"></span>
+    <span wicket:id="navigatorTop"></span>
+
+    <table class="table table-sm table-striped">
+        <col width="770">
+        <col width="530">
+        <thead class="thead-light">
+        <tr>
+            <th><a wicket:id="sort" href="#" class="badge-pill badge-light">Ф</a>ИО/Должность</th>
+            <th><a wicket:id="sortSub" href="#" class="badge-pill badge-light">Подразделение</a></th>
+            <th>Служебный телефон</th>
+            <th>Мобильный телефон</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr wicket:id="simple">
+            <td>
+                <span wicket:id="secondName"></span>
+                <span wicket:id="name"></span>
+                <span wicket:id="patr"></span>
+                <br/>
+                <span wicket:id="userPosition"></span>
+            </td>
+            <td><span wicket:id="userSub"></span></td>
+            <td>
+                <div wicket:id="modalWindowEditUserOfficialMobile"></div>
+                <a wicket:id="editUserOfficialMobileLink">
+                    <span wicket:id="userOfficialMobile"></span>
+                </a>
+            </td>
+            <td>
+                <div wicket:id="modalWindowEditUserMobile"></div>
+                <a wicket:id="editUserMobileLink">
+                    <span wicket:id="userMobile"></span>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <span wicket:id="lblBot"></span>
+    <span wicket:id="navigatorBot"></span>
+</form>
+</body>
+</html>
